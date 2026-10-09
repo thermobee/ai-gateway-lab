@@ -1,0 +1,52 @@
+# --- Terraform ---
+# State holds secrets (e.g. OIDC client secrets). Never commit it.
+*.tfstate
+*.tfstate.*
+.terraform.tfstate.lock.info
+.terraform/
+# Variable files and saved plans can contain secrets.
+*.tfvars
+*.tfvars.json
+*.tfplan
+tfplan
+# Local-only overrides and CLI config.
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+crash.log
+crash.*.log
+# Keep .terraform.lock.hcl committed: it pins provider checksums.
+
+# --- Secrets and keys ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+*.jwk
+*.jwks.json
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# --- OS / editor ---
+.DS_Store
+.idea/
+*.swp
